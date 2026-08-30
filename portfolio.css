@@ -1,0 +1,200 @@
+*{
+  margin: 0px;
+  border-radius: 0px;
+  box-sizing: border-box;
+}
+body{
+  margin: 0px;
+background:linear-gradient(to right,#82A9F6,#5963D3,#42445A,#000759);
+  color: White;
+  font-family: "Work Sans", sans-serif;
+  align-items: center;
+  text-align:center;
+  -webkit-user-select: none; /* Safari aur Chrome/Android browsers ke liye */
+  -moz-user-select: none;    /* Firefox ke liye */
+  -ms-user-select: none;     /* Internet Explorer/Edge ke liye */
+  user-select: none;         /* Standard syntax */
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+h1,h4,h3,h2{
+  color: black ;
+  font-size: 30px;
+  margin: 20px 0px 20px;
+}
+p,footer,section{
+  font-size: 20px;
+}
+
+span{
+  color: black;
+  font-size: 16px;
+}
+nav{
+  margin: 10px;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 1px 0px 5px 3px black;
+}
+
+img{
+  border-radius: 10px;
+  margin-bottom: 10%;
+}
+.profile{
+  border-radius: 30px;
+  width: 90px;
+  box-shadow: 2px 2px 5px white;
+  position: sticky;
+top: 20px;
+}
+.Hi{
+  font-size: 25px;
+}
+
+footer{
+  margin-top: 5px;
+  padding: 8px;
+  background-color: yellowgreen;
+  border-radius: 2px;
+  color: black;
+}
+
+
+i{
+  color: #3EFFE8;
+  font-size: 30px;
+  text-shadow: 2px 5px  3px black;
+  border-radius: 5px;
+}
+.line{
+  color: lightyellow;
+}
+.Hero{
+  font-size: 17px;
+  color: cyan;
+}
+
+#contact{
+  margin-bottom: 20px;
+}
+.phone,.mail,.insta{
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+li{
+  list-style: none;
+  padding: 0px;
+  margin-top: 5px;
+}
+
+progress {
+  width: 250px;
+  height: 12px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Background */
+progress::-webkit-progress-bar {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+/* Filled part */
+progress::-webkit-progress-value {
+  background: #19C51C;
+  border-radius: 10px;
+}
+
+.website{
+  text-align: center;
+  align-items: center;
+  display: block;
+  position: center;
+}
+
+.floating-btn {
+  position: fixed;   /* Isse button screen par ek jagah fix ho jayega */
+  bottom: 15px;      /* Screen ke neeche se 20px ki doori */
+  right: 10px;       /* Screen ke right (side) se 20px ki doori */
+  z-index: 1000;     /* Taaki yeh button baki sabhi elements ke upar dikhe */
+}
+
+/* Button ki styling thodi clean karne ke liye (Optional) */
+
+.floating-btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+/* Dono buttons ka main container */
+.floating-container {
+  position: fixed;   /* Screen par ek jagah fix karne ke liye */
+  bottom: 90px;      /* Screen ke neeche se doori */
+  right: 5px;       /* Screen ke right side se doori */
+  z-index: 1000;     /* Taaki sabke upar dikhe */
+  
+  display: flex;
+  flex-direction: column; /* Buttons ko ek ke niche ek (vertical) lane ke liye */
+  gap: 12px;         /* Dono buttons ke beech ka gap/space */
+}
+
+/* Dono buttons ki inner styling clean karne ke liye */
+.floating-btn,.Github-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: block;    /* Aligns perfectly */
+}
+  
+/* Agar aap chaho toh hover effect bhi daal sakte ho (Optional) */
+.floating-btn:hover,.Github-btn :hover {
+  transform: scale(1.1); /* Hover karne par button thoda bada hoga */
+  transition: transform 0.2s ease;
+}
+
+#musicGate {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.music-box {
+  width: min(90%, 400px);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#enterBtn {
+  padding: 14px 25px;
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#musicGate.hidden {
+  display: none;
+}
