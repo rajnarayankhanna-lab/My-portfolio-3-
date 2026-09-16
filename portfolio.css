@@ -3,6 +3,7 @@
   border-radius: 0px;
   box-sizing: border-box;
 }
+
 body{
   margin: 0px;
 background:linear-gradient(to right,#82A9F6,#5963D3,#42445A,#000759);
@@ -20,12 +21,17 @@ a{
   text-decoration: none;
   color: white;
 }
-h1,h4,h3,h2{
+ 
+h1,
+h4,
+h3,
+h2{
   color: black ;
   font-size: 30px;
   margin: 20px 0px 20px;
 }
-p,footer,section{
+
+p,section{
   font-size: 20px;
 }
 
@@ -33,18 +39,42 @@ span{
   color: black;
   font-size: 16px;
 }
-nav{
-  margin: 10px;
+
+/*Hidden nav*/
+#nav {
+  display: none;
+
+  position: absolute;
+  top: 60px;
+  right: 15px;
+
+  width: 50%;
   padding: 15px;
-  background-color: transparent;
+
+  background: #555;
   border-radius: 10px;
   box-shadow: 1px 0px 5px 3px black;
+
+  flex-direction: column;
+  gap: 10px;
+
+  z-index: 1000;
+}
+
+#nav.show {
+  display: flex;
+}
+
+#nav a {
+  color: white;
+  font-size: 17px;
 }
 
 img{
   border-radius: 10px;
   margin-bottom: 10%;
 }
+
 .profile{
   border-radius: 30px;
   width: 90px;
@@ -52,16 +82,9 @@ img{
   position: sticky;
 top: 20px;
 }
+
 .Hi{
   font-size: 25px;
-}
-
-footer{
-  margin-top: 5px;
-  padding: 8px;
-  background-color: yellowgreen;
-  border-radius: 2px;
-  color: black;
 }
 
 
@@ -71,9 +94,11 @@ i{
   text-shadow: 2px 5px  3px black;
   border-radius: 5px;
 }
+
 .line{
   color: lightyellow;
 }
+
 .Hero{
   font-size: 17px;
   color: cyan;
@@ -81,8 +106,16 @@ i{
 
 #contact{
   margin-bottom: 20px;
+  transition: all 0.1s ease;
 }
-.phone,.mail,.insta{
+
+hover:#contact{
+  font-size: 30%;
+}
+
+.phone,
+.mail,
+.insta{
   width: 30px;
   display: inline-block;
   vertical-align: middle;
@@ -116,9 +149,7 @@ progress::-webkit-progress-value {
 
 .website{
   text-align: center;
-  align-items: center;
-  display: block;
-  position: center;
+  margin: auto;
 }
 
 .floating-btn {
@@ -197,4 +228,47 @@ progress::-webkit-progress-value {
 
 #musicGate.hidden {
   display: none;
+}
+
+.Demo{
+  background: white;
+  border-radius: 10px;
+  height: 30px;
+  color: black;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.slide_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: 15px;
+
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+
+  border: none;
+  background: transparent;
+}
+
+#slide{
+  color: white;
+}
+
+.material-symbols-outlined{
+  font-size: 170px;
+}
+
+footer{
+  color: white;
+  background: black;
+  margin-top: 10px;
 }
