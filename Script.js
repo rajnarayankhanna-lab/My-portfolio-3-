@@ -71,3 +71,12 @@ if (!enterBtn && musicWasPlaying === "true") {
   }, { once: true });
 
 }
+
+
+//Hidden nav 
+const slideOpen = document.getElementById("slide_open");
+const nav = document.getElementById("nav");
+
+slideOpen.addEventListener("click", function () {
+  nav.classList.toggle("show");
+});
