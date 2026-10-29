@@ -80,3 +80,46 @@ const nav = document.getElementById("nav");
 slideOpen.addEventListener("click", function () {
   nav.classList.toggle("show");
 });
+
+//Dark/light mode
+const settingsBtn = document.getElementById("settingsBtn");
+const themeSettings = document.getElementById("themeSettings");
+const themeSelect = document.getElementById("themeSelect");
+
+// Open and close settings
+settingsBtn.addEventListener("click", () => {
+  const isOpen = !themeSettings.hidden;
+
+  themeSettings.hidden = isOpen;
+  settingsBtn.setAttribute("aria-expanded", String(!isOpen));
+});
+
+// Apply selected theme
+function applyTheme(theme) {
+  document.body.classList.toggle(
+    "light-mode",
+    theme === "light"
+  );
+
+  themeSelect.value = theme;
+
+  try {
+    localStorage.setItem("portfolioTheme", theme);
+  } catch (error) {
+    // Website still works if storage is unavailable.
+  }
+}
+
+// Change theme using the select menu
+themeSelect.addEventListener("change", () => {
+  applyTheme(themeSelect.value);
+});
+
+// Restore saved theme
+let savedTheme = "dark";
+
+try {
+  savedTheme = localStorage.getItem("portfolioTheme") || "dark";
+} catch (error) {}
+
+applyTheme(savedTheme === "light" ? "light" : "dark");
