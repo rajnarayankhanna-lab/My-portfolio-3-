@@ -1,6 +1,5 @@
 *{
   margin: 0px;
-  border-radius: 0px;
   box-sizing: border-box;
 }
 
@@ -9,7 +8,6 @@ body{
 background:linear-gradient(to right,#82A9F6,#5963D3,#42445A,#000759);
   color: White;
   font-family: "Work Sans", sans-serif;
-  align-items: center;
   text-align:center;
   -webkit-user-select: none; /* Safari aur Chrome/Android browsers ke liye */
   -moz-user-select: none;    /* Firefox ke liye */
@@ -22,12 +20,24 @@ a{
   color: white;
 }
  
-h1,
-h4,
-h3,
-h2{
-  color: black ;
+h1{
   font-size: 30px;
+  margin: 20px 0px 20px;
+  color: black;
+}
+h4{
+  font-size: 24px;
+  margin: 20px 0px 20px;
+  color: black;
+}
+h3{
+  font-size: 26px;
+  margin: 20px 0px 20px;
+  color: black;
+}
+h2{
+  color: black;
+  font-size: 28px;
   margin: 20px 0px 20px;
 }
 
@@ -109,7 +119,7 @@ i{
   transition: all 0.1s ease;
 }
 
-hover:#contact{
+#contact:hover{
   font-size: 30%;
 }
 
@@ -127,7 +137,7 @@ li{
   margin-top: 5px;
 }
 
-progress {
+progress{
   width: 250px;
   height: 12px;
   border: none;
@@ -136,7 +146,7 @@ progress {
 }
 
 /* Background */
-progress::-webkit-progress-bar {
+progress::-webkit-progress-bar{
   background: #e5e7eb;
   border-radius: 10px;
 }
@@ -152,7 +162,7 @@ progress::-webkit-progress-value {
   margin: auto;
 }
 
-.floating-btn {
+.floating-btn{
   position: fixed;   /* Isse button screen par ek jagah fix ho jayega */
   bottom: 15px;      /* Screen ke neeche se 20px ki doori */
   right: 10px;       /* Screen ke right (side) se 20px ki doori */
@@ -161,7 +171,7 @@ progress::-webkit-progress-value {
 
 /* Button ki styling thodi clean karne ke liye (Optional) */
 
-.floating-btn{
+.floating-btn {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -171,18 +181,19 @@ progress::-webkit-progress-value {
 
 /* Dono buttons ka main container */
 .floating-container {
-  position: fixed;   /* Screen par ek jagah fix karne ke liye */
-  bottom: 90px;      /* Screen ke neeche se doori */
-  right: 5px;       /* Screen ke right side se doori */
-  z-index: 1000;     /* Taaki sabke upar dikhe */
+  position: fixed;
+  bottom: 90px;
+  right: 5px;
+  z-index: 1000;
   
   display: flex;
-  flex-direction: column; /* Buttons ko ek ke niche ek (vertical) lane ke liye */
-  gap: 12px;         /* Dono buttons ke beech ka gap/space */
+  flex-direction: column; 
+  gap: 12px;        
 }
 
-/* Dono buttons ki inner styling clean karne ke liye */
-.floating-btn,.Github-btn {
+
+.floating-btn,
+.Github-btn {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -190,8 +201,7 @@ progress::-webkit-progress-value {
   display: block;    /* Aligns perfectly */
 }
   
-/* Agar aap chaho toh hover effect bhi daal sakte ho (Optional) */
-.floating-btn:hover,.Github-btn :hover {
+.Github-btn:hover{
   transform: scale(1.1); /* Hover karne par button thoda bada hoga */
   transition: transform 0.2s ease;
 }
@@ -263,12 +273,96 @@ progress::-webkit-progress-value {
   color: white;
 }
 
-.material-symbols-outlined{
-  font-size: 170px;
-}
-
 footer{
   color: white;
   background: black;
   margin-top: 10px;
 }
+
+/* Settings menu */
+.nav-settings {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.settings-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.theme-settings {
+  padding: 10px;
+  border-top: 1px solid #888;
+}
+
+.theme-settings[hidden] {
+  display: none;
+}
+
+.theme-settings label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.theme-settings select {
+  width: 100%;
+  padding: 9px;
+  border-radius: 7px;
+  background: white;
+  color: black;
+  border: 1px solid #aaa;
+  font-size: 15px;
+}
+
+/* Light mode */
+body.light-mode {
+  background: #9EBDE0 !important;
+  color: black !important;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode p,
+body.light-mode li,
+body.light-mode span,
+body.light-mode strong,
+body.light-mode label,
+body.light-mode i,
+body.light-mode footer {
+  color: black;
+  text-shadow: none;
+}
+
+body.light-mode a {
+  color: black;
+}
+
+body.light-mode #nav {
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 1px 0 5px #bbb;
+}
+
+body.light-mode #nav a,
+body.light-mode .settings-button,
+body.light-mode .theme-settings label {
+  color: black;
+}
+
+body.light-mode footer {
+  background: white;
+}
+
+
